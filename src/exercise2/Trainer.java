@@ -3,9 +3,10 @@ package exercise2;
 import java.util.ArrayList;
 
 public class Trainer {
-
+    private final int MAX_POKEMONSTER = 6;
     private ArrayList<Pokemonster> pokemonsters;
     private String name;
+
 
     public Trainer(String name){
         this.pokemonsters = new ArrayList<>();
@@ -13,7 +14,7 @@ public class Trainer {
     }
 
     public void addPokemonster(Pokemonster pokemonster){
-        if(pokemonster != null && !this.pokemonsters.contains(pokemonster)){
+        if(pokemonster != null && !this.pokemonsters.contains(pokemonster) && this.pokemonsters.size() <MAX_POKEMONSTER){
             this.pokemonsters.add(pokemonster);
         }
     }
